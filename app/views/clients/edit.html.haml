@@ -1,0 +1,11 @@
+%h1
+  = link_to('Clients', clients_path)
+  &rarr;
+  = link_to @client.name, @client
+
+
+= render 'form'
+
+= link_to 'View this Client', @client
+or 
+= link_to 'View All', clients_path

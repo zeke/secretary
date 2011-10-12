@@ -1,0 +1,25 @@
+%h1 Clients
+
+%table
+  %tr
+    %th Name
+    %th Phone
+    %th Email
+    %th Street address
+    %th Scheduled Estimate Time
+    %th Scheduled Job Time    
+    %th Insanity
+
+  - @clients.each do |client|
+    %tr
+      %td= link_to(client.name, client)
+      %td= client.phone1
+      %td= mail_to(client.email)
+      %td= client.street_address
+      %td= client.scheduled_estimate_time.stamp("Sat, Jan 1 at 01:00 AM")
+      %td= client.scheduled_job_time.stamp("Sat, Jan 1 at 01:00 AM")
+      %td= client.insanity_level      
+
+%br
+
+= link_to 'New Client', new_client_path

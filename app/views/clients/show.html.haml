@@ -1,0 +1,53 @@
+%h1
+  = link_to('Clients', clients_path)
+  &rarr;
+  = @client.name
+
+
+%p
+  %b Phone1:
+  = @client.phone1
+%p
+  %b Phone2:
+  = @client.phone2
+%p
+  %b Email:
+  = mail_to(@client.email)
+%p
+  %b Street address:
+  = @client.street_address
+%p
+  %b City:
+  = @client.city
+%p
+  %b State:
+  = @client.state
+%p
+  %b Zip:
+  = @client.zip
+%p
+  %b Job notes:
+  = @client.job_notes
+%p
+  %b Access notes:
+  = @client.access_notes
+%p
+  %b Schedule notes:
+  = @client.schedule_notes
+%p
+  %b Scheduled estimate time:
+  = @client.scheduled_estimate_time
+%p
+  %b Scheduled job time:
+  = @client.scheduled_job_time
+%p
+  %b Found us via:
+  = @client.found_us_via
+%p
+  %b Insanity level:
+  = @client.insanity_level
+
+%p
+  = link_to "Edit #{@client.first_name}", edit_client_path(@client)
+  or 
+  = link_to 'View All Clients', clients_path

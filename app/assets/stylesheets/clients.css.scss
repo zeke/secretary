@@ -1,0 +1,54 @@
+// Place all the styles related to the clients controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  padding: 15px;
+}
+
+table {
+  width: 100%;
+}
+
+table th {
+  color: #999;
+  font-weight: normal;
+  text-align: left;
+  
+}
+
+table th, table td {
+  padding: 10px;
+  border-bottom: 1px solid #CCC;
+}
+
+form div.field {
+  padding: 10px 0;
+}
+form div.field label {
+  width: 400px;
+  display: block;
+  color: #666;
+  font-size: .8em
+}
+
+form div.field input, form div.field textarea {
+  width: 400px;
+  display: block;
+  padding: 2px;
+  font-size: 14px;
+}
+
+
+p {
+  border-bottom: 1px solid #CCC;
+  padding: 10px;
+  margin: 0;
+}
+
+p b {
+  display: inline-block;
+  width: 300px;
+}

@@ -1,0 +1,58 @@
+= form_for @client do |f|
+  -if @client.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@client.errors.count, "error")} prohibited this client from being saved:"
+      %ul
+        - @client.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :first_name
+    = f.text_field :first_name
+  .field
+    = f.label :last_name
+    = f.text_field :last_name
+  .field
+    = f.label :phone1
+    = f.text_field :phone1
+  .field
+    = f.label :phone2
+    = f.text_field :phone2
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :street_address
+    = f.text_field :street_address
+  .field
+    = f.label :city
+    = f.text_field :city
+  .field
+    = f.label :state
+    = f.text_field :state
+  .field
+    = f.label :zip
+    = f.text_field :zip
+  .field
+    = f.label :job_notes
+    = f.text_area :job_notes
+  .field
+    = f.label :access_notes
+    = f.text_area :access_notes
+  .field
+    = f.label :schedule_notes
+    = f.text_field :schedule_notes
+  .field
+    = f.label :scheduled_estimate_time
+    = f.datetime_select :scheduled_estimate_time
+  .field
+    = f.label :scheduled_job_time
+    = f.datetime_select :scheduled_job_time
+  .field
+    = f.label :found_us_via
+    = f.text_field :found_us_via
+  .field
+    = f.label :insanity_level
+    = f.number_field :insanity_level
+  .actions
+    = f.submit 'Save'
